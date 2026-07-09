@@ -1,9 +1,10 @@
 import { Globe2, User as UserIcon, LogOut, UserCircle2, ChevronDown } from "lucide-react"
 
-export function Navbar({ variant = "solid" }) {
+const Navbar = ({ variant = "solid" }) => {
   const transparent = variant === "transparent"
 
   return (
+    <>
     <header
       className={
         transparent
@@ -61,5 +62,8 @@ export function Navbar({ variant = "solid" }) {
         </div>
       </div>
     </header>
+    </>
   )
 }
+
+export default Navbar
