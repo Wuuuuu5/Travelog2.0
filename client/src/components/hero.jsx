@@ -1,3 +1,5 @@
+import SearchBar from "./search/searchbar.jsx"
+
 const Herosection = () => {
   return (
     <>
@@ -11,7 +13,7 @@ const Herosection = () => {
             Comparing 5 booking providers across Aotearoa
           </span>
         </div>
-        <div className="relative container mx-auto px-4 py-32 text-white">
+        <div className="relative mx-auto max-w-6xl px-4 py-32 text-white sm:px-6">
           <h1 className="text-5xl font-bold">
             Every New Zealand <br /> hotel price in <br /> one search.
           </h1>
@@ -21,12 +23,16 @@ const Herosection = () => {
             where each stay sits on the map — from the Bay of Islands <br />
             to Fiordland.
           </p>
+
+          <div className="mt-4">
+            <SearchBar />
+          </div>
         </div>
 
         <p className="absolute bottom-0 left-1/2 -translate-x-1/2 text-sm text-gray-400">
           Travelog is not a booking provider. We compare prices from Booking.com, Expedia, Agoda, Hotels.com, and Trip.com.
         </p>
-        
+
 
       </section>
     </>
