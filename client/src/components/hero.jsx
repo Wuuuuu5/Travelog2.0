@@ -17,7 +17,8 @@ const Herosection = () => {
             className="animate-rise-fade mt-6 text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl"
             style={{ animationDelay: "120ms" }}
           >
-            Every New Zealand hotel price in one search.
+            Every New Zealand hotel price in 
+            <br />one search.
           </h1>
           <p
             className="animate-rise-fade mt-5 max-w-xl text-pretty text-base leading-relaxed text-white/75 sm:text-lg"
