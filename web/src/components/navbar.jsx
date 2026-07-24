@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Globe2, User as UserIcon, LogOut, UserCircle2, ChevronDown } from "lucide-react"
 
 const Navbar = ({ variant = "solid" }) => {
@@ -13,14 +14,14 @@ const Navbar = ({ variant = "solid" }) => {
       }
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
-        <a href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <span className="flex size-8 items-center justify-center rounded-lg bg-slate-900 text-white">
             <Globe2 className="size-5" />
           </span>
           <span className={`text-lg font-bold tracking-tight ${transparent ? "text-white" : "text-slate-900"}`}>
             Travelog
           </span>
-        </a>
+        </Link>
 
         <nav
           className={`hidden items-center gap-8 text-sm font-medium md:flex ${
