@@ -1,5 +1,7 @@
+"use client"
+
 import { useState, useTransition } from "react"
-import { useNavigate } from "react-router-dom"
+import { useRouter } from "next/navigation"
 import { MapPin, Users, Search, Minus, Plus, Loader2 } from "lucide-react"
 
 // This is the search box shown on the hero section: destination, dates, and guest count.
@@ -29,7 +31,7 @@ const SearchBar = ({
   initialGuests = 2,
   className = "",
 }) => {
-  const navigate = useNavigate()
+  const router = useRouter()
 
   // Each field of the form gets its own piece of state. They start out prefilled
   // from props so this component can also be reused to show a search that's
@@ -66,7 +68,7 @@ const SearchBar = ({
     if (guests !== 2) params.set("guests", String(guests)) // only include guests if it's not the default
 
     startTransition(() => {
-      navigate(`/search${params.toString() ? `?${params.toString()}` : ""}`)
+      router.push(`/search${params.toString() ? `?${params.toString()}` : ""}`)
     })
   }
 
