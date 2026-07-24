@@ -1,4 +1,4 @@
-import SearchBar from "./search/searchbar.jsx"
+import SearchBar from "./search/searchbar"
 
 const Herosection = () => {
   return (

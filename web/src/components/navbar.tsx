@@ -1,7 +1,11 @@
 import Link from "next/link"
 import { Globe2, User as UserIcon, LogOut, UserCircle2, ChevronDown } from "lucide-react"
 
-const Navbar = ({ variant = "solid" }) => {
+type NavbarProps = {
+  variant?: "solid" | "transparent"
+}
+
+const Navbar = ({ variant = "solid" }: NavbarProps) => {
   const transparent = variant === "transparent"
 
   return (
