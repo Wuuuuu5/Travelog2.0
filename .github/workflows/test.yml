@@ -17,4 +17,7 @@ jobs:
     - run: npm ci --prefix web
     # - run: npm test # uncomment this line to run tests later when backend is set up
     - run: npm run build --prefix web
+      env:
+        NEXT_PUBLIC_SUPABASE_URL: https://placeholder.supabase.co
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: placeholder-anon-key
     - run: npm run lint --prefix web
