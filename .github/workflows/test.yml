@@ -9,12 +9,12 @@ jobs:
   test:
     runs-on: ubuntu-latest # Using the latest version of Ubuntu 
     container:
-      image: node:18
+      image: node:20
     steps:
     - uses: actions/checkout@v3
       with:
         node-version: 20
-    - run: npm ci
+    - run: npm ci --prefix web
     # - run: npm test # uncomment this line to run tests later when backend is set up
-    - run: npm run build
-    - run: npm run typecheck
+    - run: npm run build --prefix web
+    - run: npm run lint --prefix web
